@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: rgb(66, 66, 66);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-nav {
+  display: flex;
+}
+
+.nav-link {
+  flex-grow: 1;
+  text-align: center;
+  padding: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  box-shadow: inset 0 -4px rgb(49, 145, 255);
+}
+
+.current {
+  background-color: rgb(231, 242, 253);
+  pointer-events: none; /* disables link for the current page */
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(
+    100vw / (1920 / 1080)
+  ); /* calculates the height according to the proportions of the image */
+  background-image: url(/images/alpine-4549189_1920.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.hero-headline {
+  padding-top: 2rem;
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+.hero-sub-headline {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.hero-btn {
+  margin: 1rem;
+  background-color: rgb(231, 242, 253);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: rgb(66, 66, 66);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-btn:hover {
+  background-color: rgb(204, 225, 247);
+}
+
+.info-section {
+  background-color: rgb(231, 242, 253);
+}
+
+.info-headline {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: rgb(26, 108, 231);
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 4rem;
+}
+
+.card {
+  flex-basis: calc(50% - 2px);
+  margin: 1px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 4rem 6rem;
+}
+
+.thumbnail {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  position: absolute;
+  left: -1.6rem;
+  height: 100%;
+}
+
+.card-headline {
+  margin-bottom: 1.4rem;
+  color: rgb(21, 134, 59);
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.card-link {
+  color: rgb(26, 108, 231);
+  font-size: 1.4rem;
+}
+
+.card-link span {
+  font-size: 2.8rem;
+  line-height: 0.5;
+}
+
+.section-footer {
+  background-color: rgba(32, 81, 187, 0.8);
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 742px) {
+  .top-nav {
+    flex-direction: column;
+  }
+  .nav-link:hover {
+    background-color: rgb(49, 145, 255);
+    color: white;
+  }
+  .hero-headline {
+    text-shadow: 0 0 8px black;
+  }
+  .cards-container {
+    flex-direction: column;
+    margin: 0 2rem;
+  }
+}
